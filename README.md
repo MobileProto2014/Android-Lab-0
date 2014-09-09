@@ -10,7 +10,7 @@ Setting up a git repository for android studio projects
 4. Module name: Anything you want. App is default for single module projects
 5. Package Name: Generally com.[company name].[project name].[module]
 6. Project Location: Default is fine (auto-generated from above information)
-7. Minimum required SDK: API14 is good (API14 and up cover most users and give a nice set of features)
+7. Minimum required SDK: API15 is good (API15 and up cover most users and give a nice set of features)
 8. Target SDK: Up to you. Latest and greatest is nice. 
 9. Compile With: Latest and greatest all the way.
 10. Language Level: Default is fine
@@ -26,22 +26,18 @@ Setting up a git repository for android studio projects
 2. Name it whatever you want
 3. Give it a description
 4. Initialize with README
-5. Give it a .gitignore (Android)
-6. Create
-7. Edit the .gitignore in the repository
-8. Add .idea/
-9. Add *.iml
-10. Commit
 
 ###Project initialization in github repository
 1. Terminal > Go to your local top-level project folder
 2. git init
 3. git remote add origin [github repo HTTPS clone url]
-4. rm .gitignore #replacing the android's .gitignore with ours
-5. git pull origin master
-6. git add . # or git add -A
-7. git commit -m "android studio project initialization" # Or whatever you want your message to be. these are important.
-8. git push -u origin master
+4. Add .idea/ to .gitignore
+5. Add *.iml to .gitignore
+6. git add .gitignore && git commit -m "ADD: gitignore" && git pull --rebase origin master
+7. git push -u origin master
+8. git add . # or git add -A
+9. git commit -m "android studio project initialization" # Or whatever you want your message to be. these are important.
+10. git push -u origin master
 
 ###Importing the project from a git repository
 If you're getting someone else's code or sharing this project via git, you must import the project when opening it for the first time.
